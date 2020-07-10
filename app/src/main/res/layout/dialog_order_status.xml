@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_order_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/tv_accept_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_bold"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/accept_order"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/colorGrey300" />
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/tv_reject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/reject_order"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_reject_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_bold"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/leave_reason"
+            android:textSize="@dimen/_14sdp" />
+
+
+        <com.example.co.squeeg.utils.CustomEditext
+            android:id="@+id/et_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:hint="@string/reason"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minLines="5"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/text_submit"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

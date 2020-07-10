@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/tv_add_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:text="@string/add_a_description"
+            android:textColor="@color/colorGrey200"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/v_add_description"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_description" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            app:counterEnabled="true"
+            app:counterMaxLength="300"
+            app:counterTextAppearance="@color/colorRed800"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_add_description">
+
+            <com.example.co.squeeg.utils.CustomEditext
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="@string/max_300_characters"
+                android:inputType="textMultiLine"
+                android:maxLines="12"
+                android:minLines="7"
+                android:padding="@dimen/_8sdp"
+                android:textColorHint="@color/colorGrey200"
+                android:textSize="@dimen/_10sdp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:id="@+id/v_description"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_description" />
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:text="@string/choose_a_category"
+            android:textColor="@color/colorGrey200"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_description" />
+
+        <View
+            android:id="@+id/tv_v_category"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/category" />
+
+        <LinearLayout
+            android:id="@+id/ll_category"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_v_category">
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:drawableStart="@drawable/category"
+                android:drawableLeft="@drawable/category"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:text="@string/category"
+                android:textSize="@dimen/_10sdp" />
+
+            <Spinner
+                android:id="@+id/s_category"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_category"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/_36sdp"
+            android:layout_marginLeft="@dimen/_36sdp"
+            android:background="@color/colorGrey300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_category" />
+
+        <LinearLayout
+            android:id="@+id/ll_sub_category"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_category">
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_sub_category"
+                android:drawableLeft="@drawable/ic_sub_category"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableTint="@color/colorGrey300"
+                android:gravity="center_vertical"
+                android:text="@string/sub_category"
+                android:textColor="@color/colorGrey200"
+                android:textSize="@dimen/_10sdp" />
+
+            <Spinner
+                android:id="@+id/s_sub_category"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_sub_category"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_sub_category" />
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/delivery_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:text="@string/when_would_you_like_your_service_delivered"
+            android:textColor="@color/colorGrey200"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_sub_category" />
+
+        <View
+            android:id="@+id/v_delivery_days"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/delivery_days" />
+
+        <LinearLayout
+            android:id="@+id/ll_delivery_days"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_delivery_days">
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_time"
+                android:drawableLeft="@drawable/ic_time"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:text="@string/delivery_time"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tv_delivery_days"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_down"
+                android:drawableRight="@drawable/ic_down"
+                android:drawablePadding="@dimen/_8sdp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vv_delivery_days"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_delivery_days" />
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:text="@string/whats_s_your_budget_optional"
+            android:textColor="@color/colorGrey200"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vv_delivery_days" />
+
+        <View
+            android:id="@+id/v_budget"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/budget" />
+
+        <LinearLayout
+            android:id="@+id/ll_budget"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_budget">
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:drawableStart="@drawable/coins"
+                android:drawableLeft="@drawable/coins"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:text="@string/budget"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.example.co.squeeg.utils.CustomEditext
+                android:id="@+id/et_budget"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/min_5"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorGrey200"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vv_budget"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_budget" />
+
+        <View
+            android:id="@+id/v_submit"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_48sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="@color/colorGrey300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vv_budget" />
+
+        <com.example.co.squeeg.utils.CustomButton
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="@drawable/button_rectangular_blue_shape"
+            android:text="@string/submit_your_request"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_submit" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/_200sdp"
+    android:minWidth="@dimen/_500sdp"
+    android:orientation="vertical">
+
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/thank_you_feedback"
+        android:textAlignment="center"
+        android:textSize="@dimen/_14sdp"
+        app:fontName="@string/font_bold" />
+
+
+    <RatingBar
+        android:id="@+id/from_rb_comments"
+        style="@style/RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:isIndicator="true"
+        android:numStars="5" />
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:id="@+id/from_chat_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/hint_feedback"
+        android:textSize="@dimen/_14sdp"
+        app:fontName="@string/font_regular" />
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:id="@+id/from_chat_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:gravity="end"
+        android:text="11:20AM"
+        android:textSize="@dimen/_10sdp"
+        android:visibility="gone"
+        app:fontName="@string/font_bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_gigs_images"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:placeholderImage="@drawable/no_image"
+            app:placeholderImageScaleType="fitCenter"
+            app:roundAsCircle="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <com.example.co.squeeg.utils.CustomTextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:maxLines="1"
+                    android:padding="@dimen/_3sdp"
+                    android:singleLine="true"
+                    android:text="bhbchcsbbsbcsbc"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_2sdp" />
+
+                <RatingBar
+                    android:id="@+id/buyer_rating"
+                    style="@style/userRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:focusable="false"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    android:stepSize="1.0"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/_5sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/button_rectangular_shape"
+                    android:text="@string/contact"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        android:visibility="gone">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_from_prf_image"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:placeholderImage="@drawable/ic_no_image_100"
+            app:placeholderImageScaleType="fitCenter"
+            app:roundAsCircle="true"
+            android:layout_marginEnd="@dimen/_5sdp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/from_chat_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:gravity="top"
+                android:text="@string/hint_feedback"
+                android:textColor="@color/colorAppTheme"
+                android:textSize="@dimen/_14sdp"
+                app:fontName="@string/font_bold"
+                android:layout_marginStart="@dimen/_3sdp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="@color/colorGrey300"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_user_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/to_chat_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="top"
+            android:padding="@dimen/_3sdp"
+            android:text="11:20AM"
+            android:textSize="@dimen/_8sdp"
+            app:fontName="@string/font_regular"
+            android:layout_alignParentRight="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/to_chat_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/hint_feedback"
+                android:textColor="@color/colorAppTheme"
+                android:textSize="@dimen/_14sdp"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/to_chat_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:hint="@string/hint_feedback"
+                android:textSize="@dimen/_12sdp" />
+
+            <RatingBar
+                android:id="@+id/to_rb_comments"
+                style="@style/RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:numStars="5"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_to_prf_image"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="0.5"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            app:placeholderImage="@drawable/ic_no_image_100"
+            app:placeholderImageScaleType="fitCenter"
+            app:roundAsCircle="true" />
+
+
+    </LinearLayout>
+
+    <!--<dreamguys.in.co.gigs.utils.CustomCheckedTextView
+        android:id="@+id/to_chat_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:gravity="top"
+        android:hint="@string/hint_feedback"
+        android:padding="@dimen/_5sdp" />-->
+
+    <com.example.co.squeeg.utils.CustomButton
+        android:id="@+id/btn_send_feeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/button_rectangular_shape"
+        android:ems="8"
+        android:text="Send Feedback"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+</LinearLayout>

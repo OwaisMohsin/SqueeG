@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.co.squeeg.fragment.BuyFragment">
+
+    <GridView
+        android:id="@+id/gv_gigs_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="@dimen/_1sdp"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/_1sdp" />
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:id="@+id/tv_noGigs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_gigs_available"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</LinearLayout>

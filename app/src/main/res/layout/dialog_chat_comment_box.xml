@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:minHeight="@dimen/_200sdp"
+    android:minWidth="@dimen/_500sdp"
+    android:orientation="vertical">
+
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/your_msg"
+        android:textSize="@dimen/_14sdp"
+        app:fontName="@string/font_bold"
+        android:layout_marginLeft="@dimen/_10sdp" />
+
+    <com.example.co.squeeg.utils.CustomEditext
+        android:id="@+id/et_chat_comment_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="top"
+        android:hint="@string/enter_msg"
+        android:lines="5"
+        android:textSize="@dimen/_12sdp"
+        app:fontName="@string/font_regular" />
+
+
+    <com.example.co.squeeg.utils.CustomButton
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/button_rectangular_shape"
+        android:ems="8"
+        android:text="@string/send"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

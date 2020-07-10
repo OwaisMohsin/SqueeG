@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="days">
+        <item>1 Days</item>
+        <item>2 Days</item>
+        <item>3 Days</item>
+        <item>4 Days</item>
+        <item>5 Days</item>
+        <item>6 Days</item>
+        <item>7 Days</item>
+        <item>8 Days</item>
+        <item>9 Days</item>
+        <item>10 Days</item>
+        <item>11 Days</item>
+        <item>12 Days</item>
+        <item>13 Days</item>
+        <item>14 Days</item>
+        <item>15 Days</item>
+        <item>16 Days</item>
+        <item>17 Days</item>
+        <item>18 Days</item>
+        <item>19 Days</item>
+        <item>20 Days</item>
+        <item>21 Days</item>
+        <item>22 Days</item>
+        <item>23 Days</item>
+        <item>24 Days</item>
+        <item>25 Days</item>
+        <item>26 Days</item>
+        <item>27 Days</item>
+        <item>28 Days</item>
+        <item>29 Days</item>
+        <item>30 Days</item>
+    </string-array>
+
+    <string-array name="revisions">
+        <item>No Revision</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>Unlimited</item>
+    </string-array>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:id="@+id/expandedListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingStart="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:paddingTop="10dp"
+        android:textSize="@dimen/_10sdp"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft" />
+</LinearLayout>

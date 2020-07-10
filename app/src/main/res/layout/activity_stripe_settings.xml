@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            app:title="@string/stripe_settings"
+            app:titleTextColor="@color/white" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/ctv_acc_holder_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/acc_name"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomEditext
+                android:id="@+id/et_acc_holder_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_regular" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/ctv_acc_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/acc_num"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomEditext
+                android:id="@+id/et_acc_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_regular" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/ctv_iban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/IBAN"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomEditext
+                android:id="@+id/et_IBAN_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_regular" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/ctv_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bank_name"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomEditext
+                android:id="@+id/et_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_regular" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/ctv_bank_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bank_addr"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomEditext
+                android:id="@+id/et_bank_addr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_regular" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/ctv_sort_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sort_code"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomEditext
+                android:id="@+id/et_sort_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/uk_bank_code"
+                android:singleLine="true"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_regular" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/ctv_swift_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/routing_num"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomEditext
+                android:id="@+id/et_routing_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_routing_num"
+                android:singleLine="true"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_regular" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/ctv_ifsc_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/IFSC_code"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomEditext
+                android:id="@+id/et_IFSC_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_ifsc_code"
+                android:singleLine="true"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_regular" />
+
+            <com.example.co.squeeg.utils.CustomButton
+                android:id="@+id/bt_update"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/button_rectangular_blue_shape"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/text_update"
+                android:textColor="@color/white"
+                app:fontName="@string/font_regular" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

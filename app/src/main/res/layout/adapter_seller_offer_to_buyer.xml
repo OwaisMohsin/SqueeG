@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_16sdp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_seller_gig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingRight="@dimen/_8sdp">
+
+            <ImageView
+                android:id="@+id/iv_service"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/activityPadding"
+                android:layout_marginRight="@dimen/activityPadding"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.example.co.squeeg.utils.CustomTextView
+                    android:id="@+id/tv_service_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/title"
+                    android:textColor="@android:color/black" />
+
+                <com.example.co.squeeg.utils.CustomTextView
+                    android:id="@+id/tv_service_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:maxLines="4"
+                    android:minLines="1"
+                    android:text="@string/description" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_seller_gig">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_16sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_seller_picture"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:src="@drawable/ic_no_image_100"
+                app:civ_border_color="@android:color/transparent"
+                app:civ_border_width="2dp" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tv_seller_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="@string/buyer_name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toEndOf="@+id/iv_seller_picture"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tv_Request_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="@string/date"
+                android:textColor="@color/colorGrey200"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toEndOf="@+id/iv_seller_picture"
+                app:layout_constraintTop_toBottomOf="@+id/tv_seller_name" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/banner_background_grey"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:maxLines="12"
+                android:minLines="7"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/request_description"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@id/iv_seller_picture"
+                app:layout_constraintTop_toBottomOf="@id/iv_seller_picture" />
+
+            <LinearLayout
+                android:id="@+id/ll_revision"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_description">
+
+                <com.example.co.squeeg.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:drawableStart="@drawable/ic_refresh"
+                    android:drawableLeft="@drawable/ic_refresh"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="@string/revisions"
+                    android:textColor="@color/colorGrey300"
+                    android:textSize="@dimen/_10sdp" />
+
+                <com.example.co.squeeg.utils.CustomTextView
+                    android:id="@+id/tv_revision"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_revision"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrey300"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_revision" />
+
+            <LinearLayout
+                android:id="@+id/ll_duration_days"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="@+id/iv_seller_picture"
+                app:layout_constraintTop_toBottomOf="@id/v_revision">
+
+                <com.example.co.squeeg.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:drawableStart="@drawable/ic_time"
+                    android:drawableLeft="@drawable/ic_time"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="@string/duration"
+                    android:textColor="@color/colorGrey300"
+                    android:textSize="@dimen/_10sdp" />
+
+                <com.example.co.squeeg.utils.CustomTextView
+                    android:id="@+id/tv_duration_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_duration_days"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:background="@color/colorGrey300"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_duration_days" />
+
+            <LinearLayout
+                android:id="@+id/ll_budget"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="@id/iv_seller_picture"
+                app:layout_constraintTop_toBottomOf="@id/v_duration_days">
+
+                <com.example.co.squeeg.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:drawableStart="@drawable/coins"
+                    android:drawableLeft="@drawable/coins"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:drawableTint="@color/colorGrey300"
+                    android:gravity="center_vertical"
+                    android:text="@string/budget"
+                    android:textColor="@color/colorGrey200"
+                    android:textSize="@dimen/_10sdp" />
+
+                <com.example.co.squeeg.utils.CustomTextView
+                    android:id="@+id/tv_budget"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/budget"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_budget"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:background="@color/colorGrey300"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_budget" />
+
+            <com.example.co.squeeg.utils.CustomButton
+                android:id="@+id/btn_accept_offer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_48sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_48sdp"
+                android:background="@drawable/button_rectangular_blue_shape"
+                android:text="@string/accept_offer"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_budget" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:id="@+id/tv_offer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="0/0"
+        android:textColor="@color/colorGrey200"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl" />
+
+</android.support.constraint.ConstraintLayout>

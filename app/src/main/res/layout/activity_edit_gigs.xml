@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAppTheme"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp">
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/title_edit_gigs"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_16sdp"
+                app:fontName="@string/font_bold" />
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:visibility="visible">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/input_profile_picture"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            app:civ_border_color="@android:color/transparent"
+                            app:civ_border_width="2dp" />
+
+
+                        <ImageView
+                            android:id="@+id/input_btn_select_picture"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="bottom|end"
+                            android:background="@drawable/btn_bg_round_corner_green"
+                            android:padding="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_edit"
+                            android:visibility="visible" />
+                    </FrameLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_title_gigs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.example.co.squeeg.utils.CustomEditext
+                            android:id="@+id/input_title_gigs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="abcdefghijklmnopqrstuvwxyz"
+                            android:hint="@string/hint_title_gigs"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_12sdp"
+                            app:fontName="@string/font_regular" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_deliver_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.example.co.squeeg.utils.CustomEditext
+                            android:id="@+id/input_deliver_day"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_deliver_gigs"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_12sdp"
+                            app:fontName="@string/font_regular" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_gig_cost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.example.co.squeeg.utils.CustomEditext
+                            android:id="@+id/input_gig_cost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_gig_cost"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_12sdp"
+                            app:fontName="@string/font_regular" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_gig_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.example.co.squeeg.utils.CustomEditext
+                            android:id="@+id/input_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:hint="@string/hint_desc"
+                            android:maxLength="250"
+                            android:maxLines="4"
+                            android:overScrollMode="always"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:textSize="@dimen/_12sdp"
+                            app:fontName="@string/font_regular" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <com.example.co.squeeg.utils.CustomTextView
+                        android:id="@+id/tv_select_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@string/select_category"
+                        app:fontName="@string/font_regular" />
+
+                    <Spinner
+                        android:id="@+id/spinner_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <Spinner
+                        android:id="@+id/spinner_sub_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.example.co.squeeg.utils.CustomTextView
+                            android:id="@+id/tv_earn_more_money"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="@string/txt_earn_money" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/input_layout_extras"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5">
+
+                                <com.example.co.squeeg.utils.CustomEditext
+                                    android:id="@+id/input_extras"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/hint_extras"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/_12sdp"
+                                    app:fontName="@string/font_regular" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/input_layout_extras_cost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <com.example.co.squeeg.utils.CustomEditext
+                                    android:id="@+id/input_extras_cost"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint=""
+                                    android:inputType="number"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/_12sdp"
+                                    app:fontName="@string/font_regular" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/input_layout_extras_day"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <com.example.co.squeeg.utils.CustomEditext
+                                    android:id="@+id/input_extras_day"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/hint_day"
+                                    android:inputType="number"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/_12sdp"
+                                    app:fontName="@string/font_regular" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_extras"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <com.example.co.squeeg.utils.CustomTextView
+                            android:id="@+id/tv_add_more_items"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/txt_add_more_items"
+                            android:textColor="@color/colorAppTheme" />
+
+                    </LinearLayout>
+
+                    <com.example.co.squeeg.utils.CustomTextView
+                        android:id="@+id/tv_title_superfast_delivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_super_fast_delivery" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_layout_fast_extras"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5">
+
+                            <com.example.co.squeeg.utils.CustomEditext
+                                android:id="@+id/input_fast_extras"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/hint_extras"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_12sdp"
+                                app:fontName="@string/font_regular" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_layout_fast_extras_cost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <com.example.co.squeeg.utils.CustomEditext
+                                android:id="@+id/input_fast_extras_cost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_12sdp"
+                                app:fontName="@string/font_regular" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_layout_fast_extras_day"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <com.example.co.squeeg.utils.CustomEditext
+                                android:id="@+id/input_fast_extras_day"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/hint_day"
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_12sdp"
+                                app:fontName="@string/font_regular" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_gig_requirement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.example.co.squeeg.utils.CustomEditext
+                            android:id="@+id/input_requirement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:hint="@string/hint_requirement"
+                            android:maxLength="250"
+                            android:maxLines="4"
+                            android:overScrollMode="always"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:textSize="@dimen/_12sdp"
+                            app:fontName="@string/font_regular" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <com.example.co.squeeg.utils.CustomTextView
+                        android:id="@+id/tv_work_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/work_option" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_work_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/rb_remote"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/remote" />
+
+                        <RadioButton
+                            android:id="@+id/rb_onsite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/onsite" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.example.co.squeeg.utils.CustomCheckedTextView
+                            android:id="@+id/ctv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_terms_conditions"
+                            android:visibility="gone"
+                            app:fontName="@string/font_regular" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+
+        <com.example.co.squeeg.utils.CustomButton
+            android:id="@+id/button_create_gigs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorPrimary"
+            android:ems="8"
+            android:gravity="center"
+            android:onClick="EditGigs"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/text_save"
+            android:textColor="@android:color/white"
+            app:fontName="@string/font_bold" />
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

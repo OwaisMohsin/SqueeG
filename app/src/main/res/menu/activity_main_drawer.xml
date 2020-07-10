@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_favourite_48"
+            android:title="@string/txt_favourites" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_last_visited_48"
+            android:title="@string/txt_last_visited_gigs" />
+
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_search_48"
+            android:title="@string/txt_seach_gigs" />
+
+        <item
+            android:id="@+id/nav_myactivity"
+            android:icon="@drawable/ic_activity_48"
+            android:title="@string/txt_my_activity" />
+        <item
+            android:id="@+id/nav_myGigs"
+            android:icon="@drawable/ic_my_gigs_48"
+            android:title="@string/txt_my_gigs" />
+        <item
+            android:id="@+id/nav_myRequests"
+            android:icon="@drawable/request"
+            android:title="@string/my_requests" />
+
+    </group>
+
+</menu>

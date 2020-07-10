@@ -1,0 +1,130 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+        maven { url 'https://maven.fabric.io/public' }
+        jcenter()
+        maven { url "https://jitpack.io"
+        }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.12.8'
+    }
+}
+//plugins {
+//    id 'com.onesignal.androidsdk.onesignal-gradle-plugin' version '0.7.0'
+//}
+//apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io"
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+android {
+//    signingConfigs {
+//        config {
+//            keyAlias 'GIGS'
+//            keyPassword 'Dreams@99'
+//            storeFile file('D:/Hari_sankar/HariSankar/ConfidentialFolder/GIGS/Gigs.jks')
+//            storePassword 'Dreams@99'
+//        }
+//    }
+    compileSdkVersion 26
+    buildToolsVersion '26.0.3'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.example.co.squeeg"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [onesignal_app_id               : "daaee31f-969e-458e-a4ac-14eda3268478",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "REMOTE"]
+
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.config
+        }
+        debug {
+            shrinkResources false
+            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.intuit.sdp:sdp-android:1.0.4'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+//    implementation 'com.onesignal:OneSignal:3.6.5'
+    implementation 'com.onesignal:OneSignal:[3.13.0, 3.99.99]'
+    implementation 'com.google.android.gms:play-services-ads:11.4.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.5.1'
+    implementation 'com.facebook.android:facebook-android-sdk:4.38.0'
+    implementation 'com.google.android.gms:play-services-auth:9.2.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+    //Loading Animation
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation 'com.facebook.fresco:fresco:0.7.0'
+    //Butter knife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.karumi:dexter:5.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //card payment
+    implementation 'com.braintreepayments:card-form:3.3.0'
+    testImplementation 'junit:junit:4.12'
+    implementation files('libs/PayPalAndroidSDK.jar')
+    implementation('com.stripe:stripe-android:1.0.4@aar') {
+        transitive = true;
+    }
+    implementation('io.fabric.sdk.android:fabric:1.3.10@aar') {
+        transitive = true;
+    }
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.4@aar') {
+        transitive = true;
+    }
+    androidTestImplementation 'junit:junit:4.12'
+}
+
+

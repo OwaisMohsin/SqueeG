@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAppTheme"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp">
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tb_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/title_cart"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_16sdp"
+                app:fontName="@string/font_bold" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/include_header_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar" />
+
+    <ListView
+        android:id="@+id/lv_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:scrollbars="none" />
+
+    <!--<include-->
+        <!--android:id="@+id/footer"-->
+        <!--layout="@layout/include_footer_cart"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/lv_cart" />-->
+
+</RelativeLayout>

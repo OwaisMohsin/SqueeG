@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/_4sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="@dimen/_135sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_gravity="center"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/iv_gigs_images"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/_5sdp"
+                android:text="$1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"
+                app:fontName="@string/font_bold" />
+
+            <ImageView
+                android:id="@+id/iv_fav_gigs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone" />
+
+            <com.example.co.squeeg.FavouriteAnimationLib.LikeButton
+                android:id="@+id/heart_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:visibility="visible"
+                app:anim_scale_factor="3"
+                app:icon_size="22dp"
+                app:icon_type="heart" />
+
+        </FrameLayout>
+
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/author"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="asdas"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone"
+            app:fontName="@string/font_regular" />
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/tv_gigs_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="asdasd"
+            android:textSize="@dimen/_12sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/rating_gigs"
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:rating="2.5"
+                android:visibility="gone" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/rating_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_star_filled_16"
+                android:drawablePadding="@dimen/_3sdp"
+                android:drawableStart="@drawable/ic_star_filled_16"
+                android:gravity="center"
+                android:text="5.0"
+                android:textAlignment="center"
+                android:textColor="@color/colorYellow"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/rating_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_1sdp"
+                android:singleLine="true"
+                android:text="(20)"
+                android:textAlignment="center"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_regular" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tv_gigs_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:gravity="end"
+                android:text="$1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp"
+                app:fontName="@string/font_bold" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_location"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_location_on_grey_24dp" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tv_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="@dimen/_8sdp"
+                app:fontName="@string/font_regular" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+

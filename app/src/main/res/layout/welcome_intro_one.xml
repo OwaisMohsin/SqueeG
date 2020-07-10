@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:backgroundTint="@color/colorAppTheme"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/intro_welcome_one" />
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/intro_screen_one_txt"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAppTheme"
+        android:textSize="@dimen/_14sdp"
+        app:fontName="@string/font_bold" />
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/intro_screen_one_desc"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAppTheme"
+        android:textSize="@dimen/_8sdp"
+        app:fontName="@string/font_regular" />
+
+</LinearLayout>

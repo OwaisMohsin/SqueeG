@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/_5sdp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/colorSubscriptionBG"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_3sdp"
+        android:background="@drawable/category_purple_button_bg_soild"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/ctv_sub_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Silver"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:text="$ "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/ctv_charges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:text="50 "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_20sdp" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/ctv_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:text="/ 1 month"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+
+        <com.example.co.squeeg.utils.CustomButton
+            android:id="@+id/cbtn_activate"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/btn_bg_round_corner_white"
+            android:text="@string/txt_activate"
+            android:textColor="@color/colorPrimary" />
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/ctv_num_gigs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Number of gigs : 5"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

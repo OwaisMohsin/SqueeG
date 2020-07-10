@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAppTheme"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp">
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tv_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/title_login"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_16sdp"
+                app:fontName="@string/font_bold" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_app_icons" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="start">
+
+                <com.example.co.squeeg.utils.CustomEditext
+                    android:id="@+id/input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:hint="@string/hint_username_email"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_12sdp"
+                    app:fontName="@string/font_regular" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.co.squeeg.utils.CustomEditext
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_12sdp"
+                    app:fontName="@string/font_regular" />
+            </android.support.design.widget.TextInputLayout>
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tv_forgot_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:gravity="end"
+                android:onClick="forgotpasswordHere"
+                android:text="@string/text_forgot_password"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/colorAppTheme"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomButton
+                android:id="@+id/button_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button_rectangular_green_shape"
+                android:gravity="center"
+                android:onClick="goToHome"
+                android:text="@string/text_login"
+                android:textColor="@android:color/white"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tv_not_a_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/signup_info"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_regular" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tv_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="goToRegister"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/signup_register_now"
+                android:textColor="@color/colorAppTheme"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_bold" />
+
+            <com.example.co.squeeg.utils.CustomTextView
+                android:id="@+id/tv_social_acc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/sociallogin"
+                android:textSize="@dimen/_10sdp"
+                app:fontName="@string/font_regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="0.5"-->
+                <!--android:background="@drawable/button_rectangular_white_shape"-->
+                <!--app:cardElevation="@dimen/_3sdp"-->
+                <!--app:cardUseCompatPadding="true">-->
+
+                <TextView
+                    android:id="@+id/tv_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_1sdp"
+                    android:layout_marginRight="@dimen/_1sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/button_rectangular_white_shape"
+                    android:drawableLeft="@drawable/ic_facebook"
+                    android:drawableStart="@drawable/ic_facebook"
+                    android:gravity="center"
+                    android:onClick="callFacebookAPI"
+                    android:padding="@dimen/_6sdp"
+                    android:text="@string/facebook"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+                <!--</android.support.v7.widget.CardView>-->
+
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="0.5"-->
+                <!--app:cardBackgroundColor="@android:color/white"-->
+                <!--app:cardElevation="@dimen/_3sdp"-->
+                <!--app:cardUseCompatPadding="true">-->
+
+                <TextView
+                    android:id="@+id/tv_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/button_rectangular_white_shape"
+                    android:drawableLeft="@drawable/ic_google"
+                    android:drawableStart="@drawable/ic_google"
+                    android:gravity="center"
+                    android:onClick="callGoogleLogin"
+                    android:padding="@dimen/_6sdp"
+                    android:text="@string/google"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+                <!--</android.support.v7.widget.CardView>-->
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

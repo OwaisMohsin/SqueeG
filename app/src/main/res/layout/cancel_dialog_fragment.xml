@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="@dimen/_500sdp"
+    android:orientation="vertical">
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:id="@+id/customTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/cancel_order"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="visible"
+        app:fontName="@string/font_bold" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.co.squeeg.utils.CustomEditext
+            android:id="@+id/input_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_reason"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:gravity="top|start"
+            android:scrollbars="vertical"
+            android:textSize="@dimen/_12sdp"
+            app:fontName="@string/font_regular" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_paypal_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.co.squeeg.utils.CustomEditext
+            android:id="@+id/input_paypal_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_paypal_email"
+            android:singleLine="true"
+            android:textSize="@dimen/_12sdp"
+            app:fontName="@string/font_regular" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:id="@+id/tv_details_err"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:text="@string/err_add_paypal"
+        android:textColor="@color/colorRed800"
+        android:visibility="gone" />
+
+    <com.example.co.squeeg.utils.CustomButton
+        android:id="@+id/btn_update_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/button_rectangular_shape"
+        android:ems="8"
+        android:text="@string/text_update"
+        android:textColor="@android:color/white"
+        app:fontName="@string/font_regular" />
+
+
+</LinearLayout>

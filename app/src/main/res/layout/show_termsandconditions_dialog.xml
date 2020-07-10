@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_300sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/terms_and_conditions"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:scrollbars="none">
+
+        <com.example.co.squeeg.utils.CustomTextView
+            android:id="@+id/tv_termsandConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:text="ffsdsfsfsfdsfnfsfnsdfnsfndsf"
+            android:textSize="@dimen/_12sdp" />
+    </ScrollView>
+</LinearLayout>

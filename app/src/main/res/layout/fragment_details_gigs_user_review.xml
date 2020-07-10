@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/lv_review_gigs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
+    <com.example.co.squeeg.utils.CustomTextView
+        android:id="@+id/tv_no_reviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/no_reviews_available"
+        android:visibility="gone" />
+
+</LinearLayout>
